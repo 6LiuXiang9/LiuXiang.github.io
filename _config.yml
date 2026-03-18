@@ -1,78 +1,230 @@
-# =============================================================================
-# 基本站点信息
-# =============================================================================
-title: "刘翔的个人主页"
-description: "个人学术主页"
-url: "https://6LiuXiang9.github.io"
-baseurl: ""
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve -l -H localhost`. If you change this file, please restart the 
+# server process.
 
-# =============================================================================
-# 左侧栏个人信息（显示在左上角）
-# =============================================================================
+# Basic Site Settings
+locale                   : "zh-CN"
+site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+title                    : "刘翔的个人主页"
+title_separator          : "-"
+name                     : &name "刘翔"
+description              : &description "刘翔的个人主页"
+url                      : https://6LiuXiang9.github.io
+baseurl                  : ""
+repository               : "6LiuXiang9/6LiuXiang9.github.io"
+
+# Site Author - The following control what appear as part of the author content on the side bar.
+#               If a field is blank the icon and link will not appear, otherwise it will be shown.
+#               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  name   : "刘翔"
-  avatar : "images/avatar.jpg"   # 把你的照片命名为 avatar.jpg 放到 images/ 目录
-  bio    : "来自湖南。"
-  location: "Hunan, China"
-  employer: "HNFNU"
+  # Biographic information
+  avatar           : "profile.png"   # 把你的照片命名为 profile.png 放到 /images/ 目录下
+  name             : "刘翔"
+  pronouns         : 
+  bio              : "来自湖南。"
+  location         : "Hunan, China"
+  employer         : "HNFNU"
+  uri              : 
+  email            : "your@email.com"   # ← 改成你的真实邮箱
 
-  # 社交链接（填写你的账号，不需要的注释掉）
+  # Academic websites（暂不需要可留空）
+  academia         :
+  arxiv            :
+  googlescholar    :
+  inspire-hep      :
+  impactstory      :
+  orcid            :
+  semantic         :
+  ssrn             :
+  pubmed           :
+  researchgate     :
+  scopus           :
+  zotero           :
+
+  # Repositories and software development
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  github           : "6LiuXiang9"
+  kaggle           :
+  stackoverflow    :
+
+  # Social media（暂不需要可留空）
+  artstation       :
+  bluesky          :
+  facebook         :
+  flickr           :
+  foursquare       :
+  goodreads        :
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         :
+  mastodon         :
+  medium           :
+  pinterest        :
+  soundcloud       :
+  steam            :
+  telegram         :
+  tumblr           :
+  twitter          :
+  vine             :
+  weibo            :
+  wikipedia        :
+  xing             :
+  youtube          :
+  zhihu            :
+
+# Publication Category
+publication_category:
+  books:
+    title: 'Books'
+  manuscripts:
+    title: 'Journal Articles'    
+  conferences:
+    title: 'Conference Papers'
+
+# Site Settings
+teaser                   :
+breadcrumbs              : false
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled"
+talkmap_link             : false
+comments:
+  provider               :
+  disqus:
+    shortname            :
+  discourse:
+    server               :
+  facebook:
+    appid                :
+    num_posts            :
+    colorscheme          :
+staticman:
+  allowedFields          : ['name', 'email', 'url', 'message']
+  branch                 : "gh-pages"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yml"
+  moderation             : true
+  path                   : "_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
+  transforms:
+    email                : "md5"
+  generatedFields:
+    date:
+      type               : "date"
+      options:
+        format           : "iso8601"
+atom_feed:
+  hide                   : false
+  path                   :
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
+
+# Social Sharing
+twitter:
+  username               : &twitter
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 :
+og_description           :
+social:
+  type                   :
+  name                   :
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:your@email.com"   # ← 改成你的邮箱
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/6LiuXiang9"
-    # - label: "Google Scholar"
-    #   icon: "fas fa-fw fa-graduation-cap"
-    #   url: "https://scholar.google.com/citations?user=YOURID"
-    # - label: "LinkedIn"
-    #   icon: "fab fa-fw fa-linkedin"
-    #   url: "https://linkedin.com/in/yourprofile"
 
-# =============================================================================
-# 导航栏（顶部菜单）
-# =============================================================================
-# 在 _data/navigation.yml 中配置具体菜单项
+# Analytics
+analytics:
+  provider               : "false"
+  google:
+    tracking_id          :
 
-# =============================================================================
-# Jekyll 构建设置
-# =============================================================================
-locale           : "zh-CN"
-repository       : "6LiuXiang9/6LiuXiang9.github.io"
-
-# 主题
-remote_theme     : "academicpages/academicpages.github.io"
-
-# 构建插件
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gzip
-
-# 排除文件
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
 exclude:
-  - "*.sh"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "README.md"
-  - "LICENSE"
-  - "CNAME"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .github
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - CHANGELOG
+  - Capfile
+  - config
+  - Dockerfile
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - local
+  - log
+  - node_modules
+  - package.json*
+  - Rakefile
+  - README
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# =============================================================================
-# 页面默认布局
-# =============================================================================
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Collections
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
 defaults:
-  # 所有页面
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true   # ← 这里控制左栏显示
-
-  # 博客文章
   - scope:
       path: ""
       type: posts
@@ -80,4 +232,83 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      share: false
+      comments: true
+      share: true
+      related: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+      author_profile: true
+      share: true
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+timezone: Etc/UTC
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+
+whitelist:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
